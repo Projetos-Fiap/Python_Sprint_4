@@ -1,0 +1,27 @@
+VIDRO
+	kg
+	250
+METAL
+	kg
+	100
+PLASTICO
+	kg
+	500
+PAPEL
+	kg
+	100
+PILHA
+	kg
+	1000
+ÓLEO
+	L
+	200
++++++++++++++++++++++++++++++++++++++
+Kit de papelaria
+	100
+Fone bluetooth
+	1000
+Carregador portátil ()
+	800
+Sabão (kg)
+	400

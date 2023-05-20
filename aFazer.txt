@@ -1,0 +1,52 @@
+A FAZER
+	
+FAZENDO
+    
+FEITO
+    funcao  data é maior
+    Tela de Extrato
+    Calcular pontos
+    Gerar Extrato
+    Tela de login
+    funcao recicla lixo
+    CRUD 	Recompensas
+    CRUD 	Tipo de lixo
+    Cadastro user
+    Login user
+    Alterar senha (?)
+    Cadastrar Troca de Recompensa
+	validar se o email é unico
+	
+	
+	Funcao formata data
+	
+______________________________
+	
+	
+	Tela de cadastro
+	Tela de alterar senha (?)
+	Telas CRUD Recompensas
+	Telas CRUD Tipo de lixo
+	Tela Cadastro Reciclagem
+DESCARTADO
+
+
+
+1. login
+2. cadastro
+
+login > home
+
+nome: sadasd
+pontos: asdasd
+
+1. alterar senha
+2. Reciclar lixo
+3. Trocar pontos
+
+login > home > reciclar lixo
+
+(Lista de tipos de lixo)
+
+
+insira o tipo de lixo

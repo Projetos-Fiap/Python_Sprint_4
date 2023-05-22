@@ -2,11 +2,11 @@
 Repo destinado à entrega de python na sprint 2
 
 grupo 2:
-Alessandra Vaiano RM551497 
-André Lambert RM99148 
-Bryan Willian RM551305 
-Lucas Feijó RM99727
-Vitor Maia RM99658
+Alessandra Vaiano RM551497 ,
+André Lambert RM99148 ,
+Bryan Willian RM551305 ,
+Lucas Feijó RM99727 ,
+Vitor Maia RM99658 .
 
 Explicação do Projeto:
 O nosso projeto consiste em um site que mapeia os Ecopontos e os demais pontos de reciclagem de São Paulo, e também ONGs e empresas que coletam o material a domicílio. O site traz informações sobre reciclagem, o que é aceito em cada ponto de coleta, como separar e transportar o lixo a ser reciclado, além da informação de ponto de coleta mais próximo da localização fornecida. 

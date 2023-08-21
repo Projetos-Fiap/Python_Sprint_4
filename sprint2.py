@@ -64,6 +64,8 @@ def mostra_home_logado():
     print('0. Logout')
 
 
+
+
 while True:
     mostra_tela_inicial()
     opcaoInicial = input('Insira a opção desejada: ')

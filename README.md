@@ -1,2 +1,5 @@
 # pytthon-sprint02
-Repo destinado à entrega de python na sprint 2
+## Sistema de troca de pontos
+
+Nossa ideia 
+

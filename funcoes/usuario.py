@@ -3,14 +3,36 @@ limpa_a_tela = lambda: os.system('cls')
 
 def cadastrar_usuario(DbUsuarios):
     limpa_a_tela()
-    nome = input('Digite o nome do usuário: ')
-    email = input('Digite o email do usuário: ')
-    for user in DbUsuarios:
-        if user['email'] == email:
-            print('Este email já está sendo usado!')
-        
+    nome = ''
+    email = ''
+    senha = ''
+    while True:
+        nome = input('Digite o nome do usuário: ')
+        if(nome == ''):
+            limpa_a_tela()
+            print('O nome não pode ser nulo!')
+            continue
+        break
+
+    while True:
+        email = input('Digite o email do usuário: ')
+        if(email == ''):
+            print('O email não pode ser nulo!')
+            continue
+
+        for user in DbUsuarios:
+            if user['email'] == email:
+                print('Este email já está sendo usado!')
+        break
+            
     while True:
         senha = input('Digite o senha do usuário: ')
+        if len(senha) < 5:
+            print('A senha deve conter no mínimo 5 caracteres!')
+            continue
+        break
+
+    while True:
         confirmeSenha = input('Confirme a senha do usuário: ')
         if(senha != confirmeSenha):
             limpa_a_tela()
@@ -43,7 +65,15 @@ def cadastra_troca_de_recompensa(DbTrocasRecompenas, DbUsers, DbRecompensas, idU
 def fluxo_login(DbUsuarios):
     while True:
         email = input('Insira o email: ')
+        if(email == ''):
+            print('O email não pode ser nulo!')
+            limpa_a_tela()
+            continue
+
         senha = input('Inisra a senha: ')
+        if(email == ''):
+            print('A senha não pode ser nula!')
+            continue
 
         for user in DbUsuarios:
             if(user['email'] == email):
@@ -73,4 +103,7 @@ def fluxo_altera_senha(idUser, DbUsers):
             DbUsers[idUser]['senha'] = novaSenha
             limpa_a_tela()
             print('Nova senha cadastrada!')
+
+    
+
 

@@ -99,10 +99,11 @@ def fluxo_reciclagem(DbReciclagens, DbUsers, DbTiposDeLixo, idUser, data):
                         pontos = DbTiposDeLixo[item['idTipoDeLixo']]['valorKG'] * item['quantidadeG'] / 1000
                         DbUsers[idUser]['pontos'] += pontos
                     break
-                case '3':
+                case '0':
                     limpa_a_tela()
                     carrinho = []
                     print('Carrinho esvaziado!')
+                    continue
                 case _:
                     print('Opção inválida, tente novamente!')
             print('Lixo reciclado com sucesso!')

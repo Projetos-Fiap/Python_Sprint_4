@@ -2,6 +2,13 @@ import os
 # Defininfo função que limpa a tela do terminal
 limpa_a_tela = lambda: os.system('cls')
 
+def eh_numero(valor):
+    numeros = '0123456789'
+
+    for char in valor:
+        if char not in numeros:
+            return False
+    return True
 
 def cadastra_reciclagem(idUser,  idTipoDeLixo, quantidadeG, data, DbUsers, DbTiposDeLixo, DbReciclagens):
     reciclagem = {
@@ -16,7 +23,6 @@ def cadastra_reciclagem(idUser,  idTipoDeLixo, quantidadeG, data, DbUsers, DbTip
     DbReciclagens.append(reciclagem)
 
 def mostra_tipos_de_lixo(DbTiposDeLixo):
-    limpa_a_tela()
     print('==========================')
     print('||    Tipos de Lixo      ||')
     print('==========================')
@@ -49,13 +55,31 @@ def fluxo_reciclagem(DbReciclagens, DbUsers, DbTiposDeLixo, idUser, data):
     while True:
         mostra_tipos_de_lixo(DbTiposDeLixo)
         mostra_carrinho(carrinho, DbTiposDeLixo)
-        opcaoLixo = int(input('Insira o tipo de lixo que deseja reciclar: '))
-        quantidadeG = float(input('Insira a quantidade em gramas: '))
-        
-
-        if(quantidadeG < 1 or opcaoLixo > len(DbTiposDeLixo)):
+        opcaoLixo = input('Insira o tipo de lixo que deseja reciclar: ')
+        # lendo e validando opcao lixo
+        if not eh_numero(opcaoLixo):
             limpa_a_tela()
             print('Valores inválidos, tente novamente!')
+            continue
+        opcaoLixo = int(opcaoLixo)
+
+        if(opcaoLixo > len(DbTiposDeLixo)):
+            limpa_a_tela()
+            print('Valores inválidos, tente novamente!')
+            continue
+        
+        #lendo e validando quantidade g
+        quantidadeG = input('Insira a quantidade em gramas: ')
+        if not eh_numero(quantidadeG):
+            limpa_a_tela()
+            print('Valores inválidos, tente novamente!')
+            continue
+
+        quantidadeG = float(quantidadeG)
+        if(quantidadeG < 1):
+            limpa_a_tela()
+            print('Valores inválidos, tente novamente!')
+            continue
         else:
             novoItem = {
                 'idTipoDeLixo': opcaoLixo-1,
@@ -124,3 +148,5 @@ item = {
     "idTipoLixo": 1,
     "quantidadeG": 3
 }
+
+

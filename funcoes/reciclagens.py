@@ -63,7 +63,7 @@ def fluxo_reciclagem(DbReciclagens, DbUsers, DbTiposDeLixo, idUser, data):
             continue
         opcaoLixo = int(opcaoLixo)
 
-        if(opcaoLixo > len(DbTiposDeLixo)):
+        if(opcaoLixo > len(DbTiposDeLixo) or opcaoLixo < 1):
             limpa_a_tela()
             print('Valores inválidos, tente novamente!')
             continue
@@ -96,12 +96,13 @@ def fluxo_reciclagem(DbReciclagens, DbUsers, DbTiposDeLixo, idUser, data):
             print(f"Item adicionado ao carrinho!")
             mostra_carrinho(carrinho, DbTiposDeLixo)
             mostrar_menu_continuar_carrinho()
-            entradaValida = True
             opcao = ''
-            while entradaValida:
+            while True:
                 opcao = input('Digite a opcao desejada: ')
-                numbers = '0123456789'
-                if opcao not in numbers:
+                if not eh_numero(opcao):
+                    print('Opção inválida! Tente novamente!')
+                    continue
+                if int(opcao) > len(DbTiposDeLixo):
                     print('Opção inválida! Tente novamente!')
                     continue
                 else:
@@ -122,6 +123,8 @@ def fluxo_reciclagem(DbReciclagens, DbUsers, DbTiposDeLixo, idUser, data):
                         DbReciclagens.append(reciclagem)
                         pontos = DbTiposDeLixo[item['idTipoDeLixo']]['valorKG'] * item['quantidadeG'] / 1000
                         DbUsers[idUser]['pontos'] += pontos
+                    print('Lixo reciclado com sucesso!')
+                    print('Pontos Adicionados à sua conta!')
                     break
                 case '0':
                     limpa_a_tela()
@@ -130,8 +133,7 @@ def fluxo_reciclagem(DbReciclagens, DbUsers, DbTiposDeLixo, idUser, data):
                     continue
                 case _:
                     print('Opção inválida, tente novamente!')
-            print('Lixo reciclado com sucesso!')
-            print('Pontos Adicionados à sua conta!')
+                    continue
 
 
 

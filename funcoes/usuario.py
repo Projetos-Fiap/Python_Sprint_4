@@ -70,7 +70,7 @@ def fluxo_login(DbUsuarios):
             limpa_a_tela()
             continue
 
-        senha = input('Inisra a senha: ')
+        senha = input('Insira a senha: ')
         if(email == ''):
             print('A senha não pode ser nula!')
             continue

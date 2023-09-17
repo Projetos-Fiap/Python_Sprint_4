@@ -87,7 +87,6 @@ def fluxo_troca_recompensa(idUser, DbUsers, DbTrocas, DbRecompensas, data):
 
         if opcaoTroca > len(DbRecompensas) or opcaoTroca < 1:
             limpa_a_tela()
-            print(len(DbTrocas))
             print('Opcao de troca inválida! Tente novamente.')
             continue
 
@@ -110,7 +109,7 @@ def fluxo_troca_recompensa(idUser, DbUsers, DbTrocas, DbRecompensas, data):
             }
             carrinho.append(novoItem)
             limpa_a_tela()
-            print(f"Item adicionado ao carrinho!")
+            print("Item adicionado ao carrinho!")
             mostra_carrinho(carrinho, DbRecompensas)
             mostrar_menu_continuar_carrinho()
             opcao = ''

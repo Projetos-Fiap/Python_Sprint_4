@@ -18,8 +18,7 @@ As funcionalidades implementadas são:
 <li>Poderá fazer o logout.</li>
 
 ## Notas de atualização
-Nessa sprint 4 incrementamos as funcionalidade de cadastrar reciclagem e também de resgatar pontos, incluindo um sistema de carrinho para a reciclagem de items e também para a troca de pontos.
-Além disso, nessa sprint passamos a validar todas as entradas de dados por parte do usuário 
+Nessa sprint passamos a persistir todos os dados em arquivos. Des
 
 ### Grupo  
 <li>André Lambert (RM99148)</li>  

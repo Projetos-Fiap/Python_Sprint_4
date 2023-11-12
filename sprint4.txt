@@ -1,4 +1,4 @@
-# Python: Challenge, Sprint 3
+# Python: Challenge, sprint 4
 
 ### O Projeto
 
@@ -19,8 +19,8 @@ Dentro da área de cliente o usuário pode:
 -Poderá fazer o logout.
 
 ## Notas de atualização
-Nessa sprint 3 incrementamos as funcionalidade de cadastrar reciclagem e também de resgatar pontos, incluindo um sistema de carrinho para a reciclagem de items e também para a troca de pontos.
-Além disso, nessa sprint passamos a validar todas as entradas de dados por parte do usuário 
+Nessa sprint passamos a persistir todos os dados em arquivos. Desta forma, todas as ações feitas no sistema são mantidas quando o programa é finalizado
+
 
 
 ### Grupo  

@@ -1,0 +1,6 @@
+[
+    {"nome": "Kit de papelaria", "custo": 100, "id": 0},
+    {"nome": "Fone Bluetooth", "custo": 1000, "id": 1},
+    {"nome": "Carregador portatil", "custo": 800, "id": 2},
+    {"nome": "Sabao", "custo": 400, "id": 3}
+]

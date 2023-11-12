@@ -1,4 +1,5 @@
 import os
+import funcoes.escritaArquivo as escritaArquivo
 limpa_a_tela = lambda: os.system('cls')
 
 def cadastrar_usuario(DbUsuarios):
@@ -50,8 +51,9 @@ def cadastrar_usuario(DbUsuarios):
     limpa_a_tela()
     print('Usuário criado com sucesso!')
     DbUsuarios.append(user)
+    escritaArquivo.sobrescreve_usuarios(DbUsuarios)
 
-def cadastra_troca_de_recompensa(DbTrocasRecompenas, DbUsers, DbRecompensas, idUser, idRecompensa, quantidade, data):
+def cadastra_troca_de_recompensa(DbtrocasRecompensas, DbUsers, DbRecompensas, idUser, idRecompensa, quantidade, data):
     custo = DbRecompensas['custo'] * quantidade
     DbUsers[idUser]['pontos'] -= custo
     troca = {
@@ -60,7 +62,8 @@ def cadastra_troca_de_recompensa(DbTrocasRecompenas, DbUsers, DbRecompensas, idU
         'quantidade': quantidade,
         'data': data
     }
-    DbTrocasRecompenas.append(troca)   
+    DbtrocasRecompensas.append(troca)   
+    escritaArquivo.sobrescreve_trocas_recompensas(DbtrocasRecompensas)
 
 def fluxo_login(DbUsuarios):
     while True:

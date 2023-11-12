@@ -1,4 +1,5 @@
 import os
+import funcoes.escritaArquivo as escritaArquivo
 # Defininfo função que limpa a tela do terminal
 limpa_a_tela = lambda: os.system('cls')
 
@@ -21,6 +22,7 @@ def cadastra_reciclagem(idUser,  idTipoDeLixo, quantidadeG, data, DbUsers, DbTip
     pontos = float(DbTiposDeLixo[idTipoDeLixo]['valorKg'] * quantidadeG / 1000)
     DbUsers[idUser][pontos] += pontos
     DbReciclagens.append(reciclagem)
+    escritaArquivo.sobrescreve_reciclagens(DbReciclagens)
 
 def mostra_tipos_de_lixo(DbTiposDeLixo):
     print('==========================')
@@ -121,6 +123,7 @@ def fluxo_reciclagem(DbReciclagens, DbUsers, DbTiposDeLixo, idUser, data):
                             'data': data
                         }
                         DbReciclagens.append(reciclagem)
+                        escritaArquivo.sobrescreve_reciclagens(DbReciclagens)
                         pontos = DbTiposDeLixo[item['idTipoDeLixo']]['valorKG'] * item['quantidadeG'] / 1000
                         DbUsers[idUser]['pontos'] += pontos
                     print('Lixo reciclado com sucesso!')

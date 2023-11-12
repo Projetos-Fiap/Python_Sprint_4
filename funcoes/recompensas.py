@@ -1,5 +1,6 @@
 import os
-# Defininfo função que limpa a tela do terminal
+import funcoes.escritaArquivo as escritaArquivo
+# Definindo função que limpa a tela do terminal
 limpa_a_tela = lambda: os.system('cls')
 
 def eh_numero(valor):
@@ -23,6 +24,8 @@ def cadastra_recompensa(DbRecompensas):
         id: id
     }
     DbRecompensas.append(recompensa)
+    escritaArquivo.sobrescreve_recompensas(DbRecompensas)
+
     limpa_a_tela()
     print('Recompensa cadastrada!')
 
@@ -142,6 +145,7 @@ def fluxo_troca_recompensa(idUser, DbUsers, DbTrocas, DbRecompensas, data):
                             'data': data
                         }
                         DbTrocas.append(troca)
+                    escritaArquivo.sobrescreve_trocas_recompensas(DbTrocas)
                     DbUsers[idUser]['pontos'] -= custoCarrinho
                     limpa_a_tela()
                     print('Troca por recompensa registrada!')

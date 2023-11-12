@@ -1,3 +1,4 @@
+import funcoes.escritaArquivo as escritaArquivo
 def cadastra_tipoDeLixo(DbTiposDeLixo):
     nome = input('Digite o nome da tipo de lixo: ')
     valorKg = input('Digite o valorKg da tipo de lixo: ')
@@ -8,6 +9,8 @@ def cadastra_tipoDeLixo(DbTiposDeLixo):
         id: id
     }
     DbTiposDeLixo.append(tipoDeLixo)
+    escritaArquivo.sobrescreve_tipos_de_lixo(DbTiposDeLixo)
+
     print('Tipo de lixo cadastrado!')
 
 def atualiza_tipoDeLixo(DbTiposDeLixo, tipoDeLixo):

@@ -1,0 +1,8 @@
+[
+    {"nome": "vidro", "valorKG": 250, "id": 0},
+    {"nome": "metal", "valorKG": 100, "id": 1},
+    {"nome": "plastico", "valorKG": 500, "id": 2},
+    {"nome": "papel", "valorKG": 100, "id": 3},
+    {"nome": "pilha", "valorKG": 1000, "id": 4},
+    {"nome": "oleo", "valorKG": 400, "id": 5}
+]
